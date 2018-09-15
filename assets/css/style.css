@@ -2,3 +2,17 @@
 format the container
 set the divs to place elements on screen  */
 
+#top{
+    color:blue;
+    text-align: center;
+}
+.gemCollection {
+    align: center;
+}
+#instructions{
+    text-align: left;
+    background-color: white;
+    font-size:15px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
