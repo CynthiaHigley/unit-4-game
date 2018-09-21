@@ -6,145 +6,171 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="assets/css/style.css">
-    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--     point to images  -->
-    
-
-     <!-- 
-    
-    div title with id 
-    div instruction box 
-    div one box for score to match 
-    div horizontal box to keep score 
-    div  4 crystal images with ids so I can grab them (match number to array number)
-    div "your total score"
-    div the user's adding score when they select gems  -->
-    <!-- create the instruction box  -->
-</head>
-<body>
-        <body background="assets/images/gradient.jpg">
-            <div class="container">
-                    <div class="col-lg-12">
-                            <div id="intoTitle">
-                                    <h1 id="top">Crystal Collection Game</h1>
-                            </div>"
-                        </div>        
-                    <div class="row">
-                
-                      <!-- Crystal Selection  -->
-                      <div class="col-lg-7">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+      
+        <link rel="stylesheet" href="assets/css/style.css">
+        <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+        <div class="container">
+                <div class="col-lg-12">
+                        <div id="intoTitle">
+                                <h1 id="top">Crystal Collection Game</h1>
+                        </div>"
+                    </div>        
+                <div class="row">
+            
+                  <!-- Crystal Selection  -->
+                  <div class="col-lg-7">
+                    <div class="card">
+                      <h3 class="card-header">Crystals</h3>
+                      
+                      <div class="card-body">
+                            <div id="gemCollection">
+                                    <img id="crystalGem" src="assets/images/crystal.png"  >
+                                    <img id="redGem" src="assets/images/garnet.png" >
+                                    <img id="orangeGem" src="assets/images/orange.png" >
+                                    <img id="blueGem" src="assets/images/sapphire.png">
+                              </div>      
+                              <div id="gemScore">
+                                    <button id="crystalScore" value="">0</button>
+                                    <button id="redScore" value="">0</button>
+                                    <button id="orangeScore" value="">0</button>
+                                    <button id="blueScore" value="">0</button>
+                                    <!-- <button id="start">Start </button> -->
+                            </div>    
+                      </div>
+                    </div>
+                  </div>
+            
+                  <!-- Instructions -->
+                  <div class="col-lg-5">
+                    <div class="card">
+                      <h3 class="card-header">Instructions:</h3>
+                      <div class="card-body">
+                        <h1 id="instructions"><div class="card">
+                            
+                                <p >Click on the number button under gem to add.</p> 
+                                <p> Click on the right number of gems to equal the value. </p> 
+                                <p>If you exceed the "Number to Equal", you lose.</p> 
+                               
+                                </h1>
+                        
+                      </div>
+                    </div>
+                  </div>
+                <div row><h1>.....................................................................................................................</h1></div>>
+                <div class="row"></div>
+                <div class="col-lg-4">
                         <div class="card">
-                          <h3 class="card-header">Crystals</h3>
+                          <h3 class="card-header">Number to equal!</h3>
                           
                           <div class="card-body">
-                                <div id="gemCollection">
-                                        <img id="0" src="assets/images/crystal.png"  >
-                                        <img id="1" src="assets/images/garnet.png" >
-                                        <img id="2" src="assets/images/orange.png" >
-                                        <img id="3" src="assets/images/sapphire.png">
+                                <div id="equalNumber">
+                                        
                                   </div>      
                           </div>
                         </div>
                       </div>
-                
-                      <!-- Instructions -->
-                      <div class="col-lg-5">
-                        <div class="card">
-                          <h3 class="card-header">Instructions:</h3>
-                          <div class="card-body">
-                            <h1 id="instructions"><div class="card">
-                                
-                                    <p >Click on the gems, each gem has a value.</p> 
-                                    <p> Click on the right number of gems to equal the value. </p> 
-                                    <p>If you exceed the "Number to Equal", you lose.</p> 
-                                   
-                                    </h1>
-                            
-                          </div>
-                        </div>
-                      </div>
-                    <div row><h1>.....................................................................................................................</h1></div>>
-                    <div class="row"></div>
-                    <div class="col-lg-4">
+                      <div class="col-lg-4">
                             <div class="card">
-                              <h3 class="card-header">Number to equal!</h3>
+                              <h3 class="card-header">Score:</h3>
                               
                               <div class="card-body">
-                                    <div id="equalNumber">
-                                            
-                                      </div>      
+                                    <div id="wins"><p>Wins:</p></div>
+                                    <div id="loses"><p>Loses:</p></div>
                               </div>
                             </div>
                           </div>
                           <div class="col-lg-4">
                                 <div class="card">
-                                  <h3 class="card-header">Score:</h3>
+                                  <h3 class="card-header">Gem Score:</h3>
                                   
                                   <div class="card-body">
-                                        <div id="wins"><p>Wins:</p></div>
-                                        <div id="loses"><p>Loses:</p></div>
+                                        <div id="currentScore">
+                                            <div id="currentNumber"></div>
                                   </div>
                                 </div>
                               </div>
-                              <div class="col-lg-4">
-                                    <div class="card">
-                                      <h3 class="card-header">Gem Score:</h3>
-                                      
-                                      <div class="card-body">
-                                            <div id="currentScore">
-                                                <div id="currentNumber"></div>
-                                      </div>
-                                    </div>
-                                  </div>
-                  </div>
-                
-              
-                
-                
-                            </div></div>
-                            
-                    </div> -->
-                    <!-- number of guesses user has  -->
-                    <!-- <div id="userInput">
-                       
-                         //populate the hangman graphics, but we never learned how to pinpoint a specific element on a jpg  -->
-                        <!-- <img id="hangman" src="assets/images/hangmanStrip.jpg" alt="Hangman" width="216" height="224px"> -->
-<!--                     
-                    </div>  
-                </div>
-            <div id="score"></div> --> -->
-    <!-- create empty gem variable 
-    create a variable userGameScore = 0   
-    create a variable numToMatch =0
-    create a userWins variable initialize to 0 
-    create a userLoses variable initialize to 0 
-    var red, blue, crystal, orange =0  
-
-    for loop for each game 
-        set numToMatch by random number between 19-120
-        set each gem value to a random number 1-12
-
-        user click event capture value for that gem 
-            add and display in score for that game
-                if gem value is === numToMatch then 
-                    they win 
-                    increment userWins + 1 
-                    end game 
-                    call initializeValues Function reset variables to 0 
-                else if gem value is < numToMatch 
-                    continue 
-                else 
-                    they lose 
-                    increment userLoses 
-                    call initializeValues function to reset variables to 0 
-                (this is in the wrong logical order)  -->
+              </div>
             
-        
+          
+            
+            
+                        </div></div>
+                        
+                </div>
+</head>
+<body>
+        <body background="assets/images/gradient.jpg">
+            
+                
+                 <script type="text/javascript">
+                    $(document).ready(function(){
+                        // <!-- make variables -->
+                        var userGameScore = 0; 
+                        var numToMatch = 0;
+                        var userWins = 0; 
+                        var userLoses = 0;
+                        var crystalGem = 0;
+                        var redGem = 0; 
+                        var orangeGem = 0; 
+                        var blueGem = 0; 
+                        var addNumber = 0; 
+                       
+                        
+                            userGameScore = 0; 
+            
+                            $('currentScore').empty();
+            
+                                       
+                            var allGems=[];
+                          
+                            numToMatch = document.getElementById("equalNumber").innerHTML = Math.floor((Math.random() * 120) + 19);
+            
+                            var crystalGem=$(".crystal");
+                            var redGem =$(".red");
+                            var orangeGem=$(".orange");
+                            var blueGem=$(".blue");
+            
+                           
+                            console.log(numToMatch);
+
+                            crystalGem = document.getElementById("crystalScore").innerHTML = Math.floor((Math.random() * 12) + 1);
+                            redGem = document.getElementById("redScore").innerHTML = Math.floor((Math.random() * 12) + 1);
+                            blueGem = document.getElementById("blueScore").innerHTML = Math.floor((Math.random() * 12) + 1);
+                            orangeGem = document.getElementById("orangeScore").innerHTML = Math.floor((Math.random() * 12) + 1);
+                            document.getElementById("wins").innerHTML = userWins ;
+                            document.getElementById("loses").innerHTML = userLoses ;
+                            //user clicks a gem and the current value displays in the number to match box 
+                            //with each click the values of the gems are totaled 
+                            //if the user matches the value then the user wins and wins value is incremented and displayed 
+                            //else the computer wins and loses value incremented one 
+                            //comment
+                            
+                             $( "#crystalScore" ).on('click', function() {
+                                addNumber = $(this).html() ;
+                                console.log(addNumber); 
+                                addScore(addNumber);
+                                // $('#crystalScore').on('click', function () {
+                                //     addScore($(this).html());
+                                // });
+                                
+                            });
+                            function addScore(number){
+
+                            }
+
+                  })
+
+                  
+            
+            
+                </script> 
+            
+
     
 </body>
 </html>

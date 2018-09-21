@@ -1,3 +1,4 @@
+
 /* user css to 
 format the container
 set the divs to place elements on screen  */
@@ -15,4 +16,8 @@ set the divs to place elements on screen  */
     font-size:15px; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
+}
+#crystalScore, #redScore, #blueScore, #orangeScore{
+    height:3em; 
+    width:8em;
 }
